@@ -2,20 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline } from "@material-ui/core";
+import { Provider } from "react-redux";
 
 import Themes from "./themes";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
 import { LayoutProvider } from "./context/LayoutContext";
 import { UserProvider } from "./context/UserContext";
+import configureStore from "./redux/store";
+
+const store = configureStore();
 
 ReactDOM.render(
   <React.StrictMode>
     <LayoutProvider>
       <UserProvider>
         <ThemeProvider theme={Themes.default}>
-          <CssBaseline />
-          <App />
+          <Provider store={store}>
+            <CssBaseline />
+            <App />
+          </Provider>
         </ThemeProvider>
       </UserProvider>
     </LayoutProvider>

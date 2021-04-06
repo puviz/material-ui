@@ -10,12 +10,12 @@ function AppFormField({ label, items, ...props }) {
   return (
     <>
       <Grid container spacing={3}>
-        <Grid item xs={2}>
+        <Grid item md={2}>
           <Typography variant="h6" style={{ fontWeight: 400 }}>
             {label}
           </Typography>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item md={4}>
           <Select {...field} {...props}>
             {items.map((item, key) => (
               <MenuItem value={item.value} key={key}>

@@ -63,12 +63,12 @@ function Onboarding() {
                     variant="elevation"
                   >
                     <Grid container spacing={3}>
-                      <Grid item xs={2}>
+                      <Grid item md={2}>
                         <Typography variant="h6" className={classes.label}>
                           User Type
                         </Typography>
                       </Grid>
-                      <Grid item xs={4}>
+                      <Grid item md={4}>
                         <RadioGroup row>
                           {userTypes.map((type) => (
                             <RadioField
@@ -122,7 +122,7 @@ function Onboarding() {
                     </Grid>
 
                     <Grid container spacing={3}>
-                      <Grid item xs={6} style={{ textAlign: "right" }}>
+                      <Grid item xs={12} md={6} style={{ textAlign: "right" }}>
                         <SubmitButton title="Add" />
                         <Button
                           onClick={handleSubmit}

@@ -17,12 +17,12 @@ function AppFormField({ label, ...props }) {
   return (
     <>
       <Grid container spacing={3} style={{alignItems: "center", marginBottom: "10px"}}>
-        <Grid item xs={2}>
+        <Grid item md={2}>
           <Typography variant="h6" classes={{root: classes.label}}>
             {label}
           </Typography>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item md={4}>
           <TextField
             variant="outlined"
             fullWidth
